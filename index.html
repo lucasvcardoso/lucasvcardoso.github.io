@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<title>Groceries Prototype Site</title>
+		<link rel="icon" href="favicon.ico" type="image/x-icon">
+		<link rel="stylesheet" type="text/css" href="css/reset.css">
+		<link rel="stylesheet" type="text/css" href="css/index.css">
+		<link rel="stylesheet" type="text/css" href="css/modal.css">
+		
+	</head>
+	<body>
+		<header>
+			<div class="container">
+				<h1 class="titulo">Groceries Prototype Site</h1>
+			</div>
+		</header>
+		<main>
+			<section class="container">
+				<table>
+					<tr>
+						<td class="subtitulo">
+							<h2>Lista de Compras</h2>
+						</td>
+						<td  class="total">
+							<h2 id="totalLista" name="totalLista">Total da lista:</h2>
+						</td>						
+					</tr>
+				</table>
+				<table>
+					<thead>
+						<tr>
+							<th>Item</th>
+							<th>Quantidade</th>
+							<th>Preço unitário</th>
+							<th>Total item</th>							
+						</tr>
+					</thead>
+					<tbody id="tabela-compras">
+						<tr class="item" id="primeiro-item">
+							<td class="info-nome">Arroz Camil tipo 1 - 5kg</td>
+							<td class="info-quantidade">1</td>
+							<td class="info-preco-unitario">12.50</td>
+							<td class="info-total-item">0</td>
+						</tr>
+
+						<tr class="item" >
+							<td class="info-nome">Batata palha extra fina</td>
+							<td class="info-quantidade">1</td>
+							<td class="info-preco-unitario">4.00</td>
+							<td class="info-total-item">0</td>
+						</tr>
+
+						<tr class="item" >
+							<td class="info-nome">Cogumelo vidro - 100g</td>
+							<td class="info-quantidade">2</td>
+							<td class="info-preco-unitario">4.00</td>
+							<td class="info-total-item">0</td>
+						</tr>
+
+						<tr class="item">
+							<td class="info-nome">Coco ralado - 50g</td>
+							<td class="info-quantidade">3</td>
+							<td class="info-preco-unitario">2.50</td>
+							<td class="info-total-item">0</td>
+						</tr>
+						<tr class="item" >
+							<td class="info-nome">Biscoito Nestlé Passatempo - 150g</td>
+							<td class="info-quantidade">2</td>
+							<td class="info-preco-unitario">3.55</td>
+							<td class="info-total-item">0</td>
+						</tr>
+					</tbody>
+				</table>
+
+			</section>
+		</main>
+		<section class="container">
+			<div id="itemModal" class="modal">
+				<div class="modal-content">
+					<h2 id="titulo-form">Adicionar novo item <span class="close">&times;</span></h2>					
+					<form id="form-adiciona">
+						<div class="">
+							<label class="mensagem">Item adicionado com sucesso!</label>
+							<br/>
+							<label for="nome">Nome:</label>
+							<input id="nome" name="nome" type="text" placeholder="Digite o nome do novo item" class="campo">
+						</div>
+						<div class="grupo">
+							<label for="quantidade">Quantidade:</label>
+							<input id="quantidade" name="quantidade" type="number" min="1" placeholder="Digite a quantidade do novo item" class="campo campo-medio">
+						</div>
+						<div class="grupo">
+							<label for="precoUnitario">Preço unitário:</label>
+							<input id="precoUnitario" name="precoUnitario" type="number" min="1" placeholder="Digite o preço unitário do novo item" class="campo campo-medio">
+						</div>				
+
+						<button id="adicionar-item" class="botao bto-principal">Adicionar</button>
+					</form>
+				</div>
+			</div>
+			<button id="adicionar-item-modal" class="botao bto-principal">Adicionar item</button>
+		</section>
+		<script src="js/calcula-items.js"></script>
+		<script src="js/form.js"></script>
+		<script src="js/modal.js"></script>
+	</body>
+</html>
