@@ -6,8 +6,7 @@
 		<link rel="icon" href="favicon.ico" type="image/x-icon">
 		<link rel="stylesheet" type="text/css" href="css/reset.css">
 		<link rel="stylesheet" type="text/css" href="css/index.css">
-		<link rel="stylesheet" type="text/css" href="css/modal.css">
-		
+		<link rel="stylesheet" type="text/css" href="css/modal.css">		
 	</head>
 	<body>
 		<header>
@@ -21,15 +20,25 @@
 					<tr>
 						<td class="subtitulo">
 							<h2>Lista de Compras</h2>
+						</td>												
+					</tr>
+					<tr>
+						<td class="total">
+							<div style="float: left">
+								<p class="totais" id="totalLista" name="totalLista">Total da lista:</p>
+							</div>
+							<div style="float: right">
+								<p class="totais" id="totalCarrinho" name="totalCarrinho">Total no carrinho: R$0.00</p>
+							</div>
 						</td>
-						<td  class="total">
-							<h2 id="totalLista" name="totalLista">Total da lista:</h2>
-						</td>						
 					</tr>
 				</table>
+				<label for="filtrar-tabela">Buscar item:</label>
+				<input type="text" name="filtro" id="filtrar-tabela" placeholder="Digite o nome do item">
 				<table>
 					<thead>
 						<tr>
+							<th>No carrinho</th>
 							<th>Item</th>
 							<th>Quantidade</th>
 							<th>Preço unitário</th>
@@ -38,38 +47,13 @@
 					</thead>
 					<tbody id="tabela-compras">
 						<tr class="item" id="primeiro-item">
+							<td><input class="info-no-carrinho" type="checkbox"></td>
 							<td class="info-nome">Arroz Camil tipo 1 - 5kg</td>
 							<td class="info-quantidade">1</td>
 							<td class="info-preco-unitario">12.50</td>
 							<td class="info-total-item">0</td>
 						</tr>
-
-						<tr class="item" >
-							<td class="info-nome">Batata palha extra fina</td>
-							<td class="info-quantidade">1</td>
-							<td class="info-preco-unitario">4.00</td>
-							<td class="info-total-item">0</td>
-						</tr>
-
-						<tr class="item" >
-							<td class="info-nome">Cogumelo vidro - 100g</td>
-							<td class="info-quantidade">2</td>
-							<td class="info-preco-unitario">4.00</td>
-							<td class="info-total-item">0</td>
-						</tr>
-
-						<tr class="item">
-							<td class="info-nome">Coco ralado - 50g</td>
-							<td class="info-quantidade">3</td>
-							<td class="info-preco-unitario">2.50</td>
-							<td class="info-total-item">0</td>
-						</tr>
-						<tr class="item" >
-							<td class="info-nome">Biscoito Nestlé Passatempo - 150g</td>
-							<td class="info-quantidade">2</td>
-							<td class="info-preco-unitario">3.55</td>
-							<td class="info-total-item">0</td>
-						</tr>
+			
 					</tbody>
 				</table>
 
@@ -80,9 +64,8 @@
 				<div class="modal-content">
 					<h2 id="titulo-form">Adicionar novo item <span class="close">&times;</span></h2>					
 					<form id="form-adiciona">
+						<label id="mensagem" class="mensagem invisivel">Item adicionado com sucesso!</label>
 						<div class="">
-							<label class="mensagem">Item adicionado com sucesso!</label>
-							<br/>
 							<label for="nome">Nome:</label>
 							<input id="nome" name="nome" type="text" placeholder="Digite o nome do novo item" class="campo">
 						</div>
@@ -104,5 +87,7 @@
 		<script src="js/calcula-items.js"></script>
 		<script src="js/form.js"></script>
 		<script src="js/modal.js"></script>
+		<script src="js/index.js"></script>
+		<script src="js/filtra.js"></script>
 	</body>
 </html>

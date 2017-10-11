@@ -43,7 +43,7 @@ function calculaTotalItem(quantidade, precoUnitario){
     return totalItem.toFixed(2);
 }
 
-function somaLista(items){
+function somaLista(){
     var items = document.querySelectorAll(".item");
     var total = 0;
     for(var i = 0; i < items.length; i++){
@@ -55,6 +55,24 @@ function somaLista(items){
 
     var totalListaTd = document.querySelector("#totalLista");
     totalListaTd.textContent = "Total da lista: R$" + parseFloat(total).toFixed(2);
+    //console.log(total);
+}
+
+function atualizaCarrinho(){
+    var items = document.querySelectorAll(".item");
+    var total = 0;
+    for(var i = 0; i < items.length; i++){
+        var item = items[i];
+        var chkNoCarrinho = item.querySelector(".info-no-carrinho");
+        if(chkNoCarrinho.checked){
+            var tdTotalItem = item.querySelector(".info-total-item");
+            var totalItem = tdTotalItem.textContent;
+            total = parseFloat(total) + parseFloat(totalItem);
+        }
+    }
+
+    var totalCarrinhoTd = document.querySelector("#totalCarrinho");
+    totalCarrinhoTd.textContent = "Total no carrinho: R$" + parseFloat(total).toFixed(2);
     //console.log(total);
 }
 

@@ -35,6 +35,19 @@
 }
 
 .mensagem{
-	display: none;
 	color: #5F021F;	
+	margin-bottom: .2em;
+}
+
+.invisivel{
+	visibility: hidden;
+}
+
+.visivel{
+	visibility: visible;
+}
+
+.fadeOut{
+	opacity: 0;
+	transition: 5s;
 }

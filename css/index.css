@@ -48,7 +48,7 @@ section h2{
 	display: block;
 	padding-bottom: .5em;
 	border-bottom: 1px solid #ccc;
-	margin-bottom: .5em;
+	margin-bottom: .2em;
 }
 
 table{
@@ -138,12 +138,27 @@ button[disabled=disabled], button:disabled {
 }
 
 .subtitulo{
-	float: left;
 	border: 0px;
 }
 
 .total{
-	float: right;
 	border: 0px;
-	
+}
+.no-carrinho{
+	background-color: lightgreen;
+}
+
+.totais{
+	font-size: 2em;
+	border-bottom: 1px solid #ccc;
+}
+
+#filtrar-tabela{
+	width: 200px;
+	height: 35px;
+	margin-bottom: 10px;
+}
+
+.item-escondido{
+	display: none;
 }

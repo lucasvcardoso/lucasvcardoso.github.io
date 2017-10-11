@@ -11,7 +11,7 @@ itemModalBtn.onclick = function(){
 closeBtn.onclick = function(){
     modal.style.display = "none";
     var form = document.querySelector("#form-adiciona");
-    limpaCampos(form);
+    form.reset();
 }
 
 window.onclick = function(event){
@@ -19,7 +19,7 @@ window.onclick = function(event){
     
     if(event.target == modal){
         modal.style.display = "none";
-        limpaCampos(form);
+        form.reset();
     }
 }
 
